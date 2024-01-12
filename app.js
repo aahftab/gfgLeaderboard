@@ -12,6 +12,10 @@ app.get("/", (req, res) => {
   res.render("scoreboard.ejs", { title: "Scoreboard", users: users });
 });
 
-app.listen(process.env.PORT, () => {
+app.get("/user", (req, res) => {
+  res.send("Hello World")
+})
+
+app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
